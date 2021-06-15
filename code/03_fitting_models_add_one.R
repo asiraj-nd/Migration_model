@@ -40,7 +40,7 @@ ncols = 18
 ###### SET UP the input feeder for a particular model
 #########################################################################################
 
-  deptused  = read.table("./COL_zone_mig.dat", sep=" " ,skip=0, header=FALSE)
+  deptused  = read.table("./COL_dept_mig.dat", sep=" " ,skip=0, header=FALSE)
   munidata  = read.table(paste("./COL_dist_feed.dat",sep=""), sep=" " ,skip=0, header=FALSE)
   thisexcl<- c(4:14)
   bauexcl= thisexcl

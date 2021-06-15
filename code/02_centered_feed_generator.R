@@ -20,7 +20,7 @@ library(BayesianTools)
 
 source("./00_numfunctions.R")
 
-deptdata = read.csv("../model_inputs/COL_Dept_datamaster.csv", stringsAsFactors = F)
+deptdata = read.csv("../model_inputs/COL_dept_datamaster.csv", stringsAsFactors = F)
 head(deptdata)
 dim(deptdata)/33
 

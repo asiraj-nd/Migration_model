@@ -57,12 +57,13 @@ names(deptdata) = c("CODEI","CODEJ","DEPTSNI","DEPTSNJ","POPI","POPJ","IPUMPSPOP
   deptdata$PercJ=with(deptdata, rank(deptdata$POPJ)/length(POPJ))
   deptdata$TotPop=with(deptdata, sum(POPI))
   head(deptdata)
-
+  #fwrite(deptdata, file="../model_inputs/COL_dept_datamaster.csv")
+  
   length(rowSums(df))
   n=matrix(rep(rowSums(df),78),nrow=78)
   y=df
   #write.csv(cbind(mx_to_vec(y), mx_to_vec(n)), "../model_inputs/dept_data_long.csv", row.names=F, quote=F)
-
+  
 ##############################################################  
 ##### 1122 districts level #creat dist-dist list
 
@@ -144,6 +145,6 @@ munidata$Percj=   rank(unlist(munidata$POPj))/ length(munidata$POPj)
 names(munidata) = c("DCODEi","DCODEj","MCODEi","MCODEj","DEPTSNi","DEPTSNj","MUNSNi","MUNSNj","DISTij","CONTij","POPi","POPj","AREAi","AREAj","UrbanPropi","UrbanPropj","GECONi","GECONj","LATFR","LATTO","LONFR","LONTO","CountDisti", "CountDistj",
                     "MajCeni","MajCenj","Tinyi","Tinyj","Perci","Percj")
 
-#fwrite(munidata, file="../model_inputs/COL_dist_752_datamaster.csv")
+#fwrite(munidata, file="../model_inputs/COL_dist_1122_datamaster.csv")
 
 
